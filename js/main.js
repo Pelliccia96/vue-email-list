@@ -5,6 +5,7 @@ createApp({
         title: "Vue Email List",
         listaMail: [],
         listaMailTemporanea: [],
+        ajaxCounter : 0,
     };
   },
     methods: {
@@ -22,7 +23,6 @@ createApp({
         },
     },
     mounted () {
-        this.ajaxCounter = 0;
         for (let i = 0; i < 10; i++) {
             this.fetchData();
         };
