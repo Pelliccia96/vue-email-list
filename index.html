@@ -11,8 +11,16 @@
 </head>
 <body class="bg-dark">
     <div id="app">
-        <div class="container text-center my-5">
-            <h1 class="text-white">{{title}}</h1>
+        <div class="container text-white my-5">
+            <h1 class="text-center">{{title}}</h1>
+            <div class="py-5">
+                <h2>Lista e-mail</h2>
+                <div>
+                    <ul>
+                        <li v-for="(email, i) in listaMail" :key="i">E-mail: {{email}}</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
     <script src="js/main.js"></script>
