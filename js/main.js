@@ -17,6 +17,8 @@ createApp({
         },
     },
     mounted () {
-        this.fetchData()
+        for (let i = 0; i < 10; i++) {
+            this.fetchData()
+        }
     }
 }).mount("#app")
