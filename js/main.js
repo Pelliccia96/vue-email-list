@@ -14,6 +14,7 @@ createApp({
                 console.log(resp);
                 console.log("L'email generata dal server è: " + resp.data.response);
                 this.listaMailTemporanea.push(resp.data.response);
+                this.ajaxCounter++;
                 if (this.ajaxCounter === 10) {
                     this.listaMail = this.listaMailTemporanea;
                 }
@@ -24,7 +25,6 @@ createApp({
         this.ajaxCounter = 0;
         for (let i = 0; i < 10; i++) {
             this.fetchData();
-            this.ajaxCounter++;
         };
     },
 }).mount("#app")
